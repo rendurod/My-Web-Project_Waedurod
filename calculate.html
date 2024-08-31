@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คำนวณค่างวด</title>
+
+    <!-- Option 1: Include in HTML -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Login & Register-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-3 bg-while navbar-expand-sm navbar-white shadow-lg"> <!--<nav class="fixed-top bg-white navbar navbar-expand-lg py-3 shadow-sm"></nav> -->
+    <div class="container">
+      <img class="rounded-pill" width="10%" src="Image/logopun.png" alt="BigUp" >
+      <a class="navbar-brand text-gradaint" href="index.html">WAEDUROD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="ms-auto me-0 navbar-nav mb-2 mb-lg-0">
+          <li><a href="#" class="nav-link px-3">ข่าวสารรถยนต์
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+                <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+              </svg>
+        </a></li>
+        <li><a href="#" class="nav-link px-3">คำนวณค่างวด
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
+            </svg>
+      </a></li>
+      <li><a href="#" class="nav-link px-2" data-bs-toggle="modal" data-bs-target="#myModal">รถยนต์ของฉัน
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+            <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+          </svg>
+    </a></li>
+        </ul>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">หัวข้อ-รถยนต์ของฉัน</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                ขออภัย คุณยังไม่ได้ทำการสมัครสมาชิก<br>
+                **ไม่สามารถเปรียบเทียบรุ่นรถคันอื่นกับรถของคุณได้**
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">ปิด</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#myModal2">ล็อคอิน</button>
+          <!-- The Modal -->
+        <div class="modal fade" id="myModal2">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">ลงชื่อเข้าร่วม / ล็อคอิน</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                <main class="form-signin w-100 m-auto">
+                  <form>
+                    <h1 class="h3 mb-3 fw-normal text-start">Please sign in</h1>
+                
+                    <div class="form-floating my-2">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating my-2">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+                
+                    <div class="form-check text-start my-3">
+                      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Remember me
+                      </label>
+                    </div>
+                    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                    <p class="mt-5 mb-3 text-body-secondary text-start">Don't have an account yet? <a href="register.html">Click here</a> to sing up</p>
+                  </form>
+                </main>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+          <button type="button" class="btn btn-primary" onclick="window.location.href='register.html'">สมัครสมาชิก</button>
+        </div>   
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Calculate -->
+
+
+
+<div class="row">
+    <div class="col p-2 bg-warning text-white"></div>
+</div>
+<div class="container">
+<main class="form-signin w-100 m-auto">
+<h1 class="mb-3"></h1>
+<h1>คำนวณค่างวด</h1>
+<form>
+  <div class="form-floating ">
+    <input type="text" class="form-control" id="car_price" name="car_price" placeholder="Enter Username">
+    <label for="car_price">ราคารถ (บาท):</label>
+  </div>
+  <div class="form-floating my-2">
+    <input type="text" class="form-control" id="down_payment" name="down_payment" placeholder="Enter Username">
+    <label for="down_payment">เงินดาวน์ (บาท):</label>
+  </div>
+  <div class="form-floating my-2">
+    <input type="text" class="form-control" id="installment_period" name="installment_period" placeholder="Enter Username"><br><br>
+    <label for="installment_period">ระยะเวลาผ่อน (เดือน):</label>
+  </div>
+
+  <button class="btn btn-warning w-100 py-2" type="submit">คำนวณ</button>
+  <!-- <input type="submit" value="คำนวณ"> -->
+  
+</form>
+</main>
+</div>
+
+<!-- Footer-->
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+
+<a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+  <img class="rounded-pill" width="10%" src="Image/logopun.png" alt="BigUp" >
+</a>
+
+<ul class="nav col-md-4 justify-content-end">
+  <li class="nav-item"><a href="#" class="nav-link px-2 text-body-primary">หน้าหลัก</a></li>
+  <li class="nav-item"><a class="nav-link px-2 text-body-secondary">เปรียบเทียบ</a></li>
+  <li class="nav-item"><a class="nav-link px-2 text-body-secondary">เกี่ยวกับ</a></li>
+</ul>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
